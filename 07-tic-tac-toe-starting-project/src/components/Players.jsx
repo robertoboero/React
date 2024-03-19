@@ -1,17 +1,19 @@
 import Player from "./Player";
-export default function Players({ currentPlayer }) {
-  console.log(currentPlayer);
+import { PLAYERS } from "../App.jsx";
+export default function Players({ currentPlayer, onPlayerChange }) {
   return (
     <ol id="players" className="highlight-player">
       <Player
-        initialName="Player 1"
+        initialName={PLAYERS.X}
         symbol="X"
         isActive={currentPlayer == "X" ? true : false}
+        onPlayerChange={onPlayerChange}
       ></Player>
       <Player
-        name="Player 2"
+        initialName={PLAYERS.X}
         symbol="0"
         isActive={currentPlayer == "O" ? true : false}
+        onPlayerChange={onPlayerChange}
       ></Player>
     </ol>
   );

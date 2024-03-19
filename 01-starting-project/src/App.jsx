@@ -4,13 +4,12 @@ import CoreConcepts from "./components/CoreConcepts/CoreConcepts";
 import Examples from "./components/Examples/Examples";
 
 function App() {
-
   return (
     <>
       <Header logo={LOGO.logo} alt="Stylized atom prop"></Header>
       <main>
-        <CoreConcepts/>
-        <Examples/>
+        <CoreConcepts />
+        <Examples />
       </main>
     </>
   );

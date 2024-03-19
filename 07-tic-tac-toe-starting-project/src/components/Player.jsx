@@ -1,6 +1,11 @@
 import { useState } from "react";
 
-export default function Player({ initialName, symbol, isActive }) {
+export default function Player({
+  initialName,
+  symbol,
+  isActive,
+  onPlayerChange,
+}) {
   const [playerName, setPlayerName] = useState(initialName);
   const [isClick, setIsClick] = useState(false);
 
@@ -9,8 +14,18 @@ export default function Player({ initialName, symbol, isActive }) {
 
   function editHandler() {
     setIsClick((editing) => !editing);
+    if (!isClick) {
+      setPlayerName(" ");
+    }
+    if (isClick) {
+      onPlayerChange(symbol, playerName);
+    }
   }
   function handleChange(e) {
+    console.log(initialName + "=" + playerName);
+    if (playerName == initialName) {
+      console.log("ciao");
+    }
     setPlayerName(e.target.value);
   }
 
