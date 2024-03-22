@@ -1,14 +1,8 @@
-import { useState } from "react";
-export default function Input() {
-  const [inputValue, setInputValue] = useState();
-
-  function handleOnChange(e) {
-    setInputValue(e.target.value);
-  }
+export default function Input({ value, label, handleOnChange }) {
   return (
-    <div>
-      <label>Initial Investiment</label>
-      <input type="number" onChange={handleOnChange} value={inputValue} />
-    </div>
+    <p>
+      <label>{label}</label>
+      <input type="number" onChange={handleOnChange} value={value} />
+    </p>
   );
 }
