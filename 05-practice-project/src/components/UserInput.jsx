@@ -1,22 +1,7 @@
 import Input from "./Input";
 import { useState } from "react";
 
-export default function UserInput() {
-  const [inputValue, setInputValue] = useState({
-    initialInvestment: 10000, // Corretto da "initialInvestiment" a "initialInvestment"
-    annualInvestment: 20000,
-    expectReturn: 6,
-    duration: 10,
-  });
-
-  function handleOnChange(inputIdentifier, newValue) {
-    setInputValue((prevInputValue) => ({
-      ...prevInputValue,
-      [inputIdentifier]: parseFloat(newValue), // Conversione in numero
-    }));
-    console.log(inputValue);
-  }
-
+export default function UserInput({ handleOnChange, inputValue }) {
   return (
     <section id="user-input">
       <div className="input-group">
@@ -38,9 +23,9 @@ export default function UserInput() {
       <div className="input-group">
         <Input
           label="Expected Return"
-          value={inputValue.expectReturn}
+          value={inputValue.expectedReturn}
           handleOnChange={
-            (event) => handleOnChange("expectReturn", event.target.value) // Corretto l'identificatore
+            (event) => handleOnChange("expectedReturn", event.target.value) // Corretto l'identificatore
           }
         />
         <Input
