@@ -14,6 +14,12 @@
     },
     {
       "path": "06-styling-project"
+    },
+    {
+      "path": "07-debugging-react-app"
+    },
+    {
+      "path": "08-working-with-reft-portals"
     }
   ],
   "settings": {}

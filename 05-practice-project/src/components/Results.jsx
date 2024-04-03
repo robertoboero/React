@@ -4,6 +4,7 @@ import { DEFEAULT_VALUES } from "../App";
 export default function Results({ values }) {
   console.log(values);
   const results = calculateInvestmentResults(values);
+
   const initialInvestment =
     results[0].valueEndOfYear -
     results[0].interest -
