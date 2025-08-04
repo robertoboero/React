@@ -1,0 +1,26 @@
+{
+  "folders": [
+    {
+      "path": "first-project"
+    },
+    {
+      "path": "01-starting-project"
+    },
+    {
+      "path": "07-tic-tac-toe-starting-project"
+    },
+    {
+      "path": "05-practice-project"
+    },
+    {
+      "path": "06-styling-project"
+    },
+    {
+      "path": "07-debugging-react-app"
+    },
+    {
+      "path": "08-working-with-reft-portals"
+    }
+  ],
+  "settings": {}
+}
